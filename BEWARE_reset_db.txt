@@ -1,0 +1,12 @@
+mysql -u root -p
+
+DROP DATABESE CoCoBBF;
+FLUSH PRIVILEGES;
+create database CoCoBBF;
+CREATE USER 'coco'@'localhost' IDENTIFIED BY 'cocorules!'
+GRANT ALL PRIVILEGES ON `CoCoBBF`.* TO 'coco'@'localhost';
+
+exit
+
+mysql -u root -p CoCoBBF < /home/coco/demo_bbf/demo_bbf_clean.sql
+
