@@ -1,6 +1,6 @@
  Demo
 1) start ODL
-/home/coco/vpnservice-karaf-intent/distribution-karaf-0.4.2-Beryllium-SR2/bin/karaf
+/home/coco/vpnservice-karaf-intent/distribution-karaf-0.4.2-Berylium-SR2-clean/bin/karaf
 
 2) start mysql
 ...
@@ -15,14 +15,18 @@ you comment out line 402 in topo_bbf1db.py
 
 #DON'T RUN UNLESS YOU KNOW WHAT YOU ARE DOING
 
-
-3) start CoCo portal
-...
-4) start mininet
+3) start mininet
 cd /home/coco/demo_bbf
 sudo python topo_bbf1_db.py
-5) kill arp flows (static arps installed on the hosts)
+
+4) kill arp flows (static arps installed on the hosts)
 /home/coco/demo_bbf/del_arp_flows.sh
+
+5) start CoCo portal
+        5a) run Eclipse
+        5b) within Eclipse go to "Servers" tab (bottom panel)
+        5c) Right click "Tomcat v7.0 Server at localhost" and click "Start"
+
 6) connect hosts (e.g., h1 and h2) in CoCo portal and check connectivity from mininet
 mininet> xterm h1
 ping 10.0.2.1
