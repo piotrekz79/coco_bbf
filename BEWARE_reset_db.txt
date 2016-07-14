@@ -4,7 +4,7 @@ DROP DATABESE CoCoBBF;
 FLUSH PRIVILEGES;
 create database CoCoBBF;
 CREATE USER 'coco'@'localhost' IDENTIFIED BY 'cocorules!'
-GRANT ALL PRIVILEGES ON `CoCoBBF`.* TO 'coco'@'localhost';
+GRANT ALL PRIVILEGES ON CoCoBBF.* TO 'coco'@'localhost';
 
 exit
 
